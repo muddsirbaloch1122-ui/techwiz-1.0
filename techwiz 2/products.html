@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Products | Market Link</title>
+<meta name="description" content="Browse fresh vegetables, fruits, seeds, fertilizers, tools and more on Market Link.">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-links">
+      <span><i class="fa-solid fa-envelope"></i> support@marketlink.com</span>
+      <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+    </div>
+    <div class="top-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Become a Seller</a>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="products.html">Categories</a>
+      <a href="index.html#farmers">Farmers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="nav-search nav-search-form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search products...">
+      </form>
+      <a href="products.html" class="icon-btn" title="Wishlist" style="position:relative"><i class="fa-solid fa-heart"></i><span class="badge wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart" style="position:relative"><i class="fa-solid fa-cart-shopping"></i><span class="badge cart-count">0</span></a>
+      <a href="login.html" class="icon-btn" title="Login"><i class="fa-solid fa-user"></i></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="products.html">Categories</a>
+    <a href="index.html#farmers">Farmers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Home</a> / Shop
+    <h1>Shop All Products</h1>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="shop-layout">
+      <aside class="filters-panel reveal-left">
+        <div class="flex-between mt-20" style="margin-top:0;margin-bottom:14px;">
+          <h4 style="margin:0">Filters</h4>
+          <button class="btn-sm btn-outline" style="padding:5px 12px;font-size:0.78rem;border-radius:6px" onclick="clearAllFilters()">Clear All</button>
+        </div>
+        <div class="filter-block">
+          <h4>Search</h4>
+          <input type="text" id="shopSearchInput" placeholder="Search products..." style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;">
+        </div>
+        <div class="filter-block">
+          <h4>Category</h4>
+          <div id="categoryFilterList"></div>
+        </div>
+        <div class="filter-block">
+          <h4>Price Range</h4>
+          <input type="range" id="priceRange" class="price-range" min="0" value="1000">
+          <div class="price-range-vals"><span>Rs 0</span><span id="priceRangeMax">Rs 1000</span></div>
+        </div>
+        <div class="filter-block">
+          <h4>Minimum Rating</h4>
+          <label class="filter-option"><input type="radio" name="ratingFilter" value="0" checked> All Ratings</label>
+          <label class="filter-option"><input type="radio" name="ratingFilter" value="4"> 4★ & above</label>
+          <label class="filter-option"><input type="radio" name="ratingFilter" value="4.5"> 4.5★ & above</label>
+        </div>
+      </aside>
+
+      <div class="shop-main reveal-right">
+        <div class="shop-toolbar">
+          <span class="results-count" id="resultsCount">Showing products</span>
+          <select id="sortSelect">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="name">Name: A-Z</option>
+          </select>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></div>
+        <p>Connecting Farmers to Markets. Fresh agriculture products delivered directly from farm to your doorstep.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=Vegetables">Vegetables</a></li>
+          <li><a href="products.html?category=Fruits">Fruits</a></li>
+          <li><a href="products.html?category=Seeds">Seeds</a></li>
+          <li><a href="products.html?category=Farming%20Tools">Farming Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> <span>123 Agri Plaza, Karachi, Pakistan</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>+92 300 1234567</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>support@marketlink.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Market Link. All rights reserved.</div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

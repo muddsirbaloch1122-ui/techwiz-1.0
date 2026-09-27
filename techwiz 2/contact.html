@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Market Link</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-links">
+      <span><i class="fa-solid fa-envelope"></i> support@marketlink.com</span>
+      <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+    </div>
+    <div class="top-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Become a Seller</a>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="products.html">Categories</a>
+      <a href="index.html#farmers">Farmers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="nav-search nav-search-form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search products...">
+      </form>
+      <a href="products.html" class="icon-btn" title="Wishlist" style="position:relative"><i class="fa-solid fa-heart"></i><span class="badge wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart" style="position:relative"><i class="fa-solid fa-cart-shopping"></i><span class="badge cart-count">0</span></a>
+      <a href="login.html" class="icon-btn" title="Login"><i class="fa-solid fa-user"></i></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="products.html">Categories</a>
+    <a href="index.html#farmers">Farmers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container"><a href="index.html">Home</a> / Contact<h1>Get In Touch</h1></div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="contact-info-card">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h4>Our Address</h4><p style="color:var(--text-light)">123 Agri Plaza, Shahrah-e-Faisal, Karachi, Pakistan</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><i class="fa-solid fa-phone"></i></div>
+          <div><h4>Phone Number</h4><p style="color:var(--text-light)">+92 300 1234567</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <div><h4>Email Address</h4><p style="color:var(--text-light)">support@marketlink.com</p></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <div><h4>Business Hours</h4><p style="color:var(--text-light)">Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: Closed</p></div>
+        </div>
+        <div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0619452589885!2d67.11432547529525!3d24.929959577884055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338c0f3713f79%3A0xd93ccefc56ffe37e!2sAptech%20University%20Road%20Center!5e0!3m2!1sen!2s!4v1790425296196!5m2!1sen!2s" width="500" class="ourmap" height="220" style="border:0;" allowfullscreen="allowfullscreen"  loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </div>
+
+      <div class="checkout-card" style="margin:0">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label>Full Name</label><input type="text" name="name" required><span class="form-error">Please enter your name.</span></div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="email" required><span class="form-error">Please enter a valid email.</span></div>
+          </div>
+          <div class="form-group"><label>Subject</label><input type="text" name="subject" required><span class="form-error">Please enter a subject.</span></div>
+          <div class="form-group"><label>Message</label><textarea name="message" rows="5" required></textarea><span class="form-error">Please enter your message.</span></div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></div>
+        <p>Connecting Farmers to Markets. Fresh agriculture products delivered directly from farm to your doorstep.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=Vegetables">Vegetables</a></li>
+          <li><a href="products.html?category=Fruits">Fruits</a></li>
+          <li><a href="products.html?category=Seeds">Seeds</a></li>
+          <li><a href="products.html?category=Farming%20Tools">Farming Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> <span>123 Agri Plaza, Karachi, Pakistan</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>+92 300 1234567</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>support@marketlink.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Market Link. All rights reserved.</div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

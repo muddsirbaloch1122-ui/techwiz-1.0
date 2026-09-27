@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details | Market Link</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-links">
+      <span><i class="fa-solid fa-envelope"></i> support@marketlink.com</span>
+      <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+    </div>
+    <div class="top-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Become a Seller</a>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="products.html">Categories</a>
+      <a href="index.html#farmers">Farmers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="nav-search nav-search-form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search products...">
+      </form>
+      <a href="products.html" class="icon-btn" title="Wishlist" style="position:relative"><i class="fa-solid fa-heart"></i><span class="badge wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart" style="position:relative"><i class="fa-solid fa-cart-shopping"></i><span class="badge cart-count">0</span></a>
+      <a href="login.html" class="icon-btn" title="Login"><i class="fa-solid fa-user"></i></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="products.html">Categories</a>
+    <a href="index.html#farmers">Farmers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Home</a> / <a href="products.html">Shop</a> / <span id="pdBreadcrumbName">Product</span>
+  </div>
+</div>
+
+<section class="section" id="pdWrap">
+  <div class="container">
+    <div class="pd-layout">
+      <div class="pd-gallery">
+        <div class="pd-gallery-main"><img id="pdMainImg" src="" alt="Product image"></div>
+        <div class="pd-thumbs" id="pdThumbs"></div>
+      </div>
+      <div class="pd-info">
+        <span class="product-cat" id="pdCategory"></span>
+        <h1 id="pdName"></h1>
+        <div class="pd-meta">
+          <span class="rating" id="pdRating"></span>
+          <span id="pdStock" class="stock-badge"></span>
+        </div>
+        <div class="pd-price-row">
+          <span class="price" id="pdPrice"></span>
+          <span class="old-price" id="pdOldPrice"></span>
+        </div>
+        <p class="pd-desc" id="pdDesc"></p>
+        <div class="qty-selector">
+          <button id="qtyMinus" type="button"><i class="fa-solid fa-minus"></i></button>
+          <input type="text" id="qtyValue" readonly>
+          <button id="qtyPlus" type="button"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="pd-actions">
+          <button id="pdAddCart" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          <button id="pdBuyNow" class="btn btn-outline">Buy Now</button>
+          <button id="pdWishBtn" class="icon-btn" title="Add to Wishlist"><i class="fa-solid fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pd-tabs">
+      <button class="pd-tab-btn active" data-tab="tabDesc">Description</button>
+      <button class="pd-tab-btn" data-tab="tabSpecs">Specifications</button>
+      <button class="pd-tab-btn" data-tab="tabFarmer">Farmer Info</button>
+      <button class="pd-tab-btn" data-tab="tabReviews">Reviews</button>
+    </div>
+    <div id="tabDesc" class="pd-tab-panel active"><p id="pdDescFull" style="color:var(--text-light)">Grown with care using sustainable farming practices. Every batch is quality-checked before dispatch to ensure freshness and consistency for our customers.</p></div>
+    <div id="tabSpecs" class="pd-tab-panel"><table class="spec-table"><tbody id="pdSpecs"></tbody></table></div>
+    <div id="tabFarmer" class="pd-tab-panel"><div id="pdFarmerInfo"></div></div>
+    <div id="tabReviews" class="pd-tab-panel"><div id="pdReviews"></div></div>
+
+    <h2 class="related-heading">Related Products</h2>
+    <div class="product-grid" id="relatedProducts"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></div>
+        <p>Connecting Farmers to Markets. Fresh agriculture products delivered directly from farm to your doorstep.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=Vegetables">Vegetables</a></li>
+          <li><a href="products.html?category=Fruits">Fruits</a></li>
+          <li><a href="products.html?category=Seeds">Seeds</a></li>
+          <li><a href="products.html?category=Farming%20Tools">Farming Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> <span>123 Agri Plaza, Karachi, Pakistan</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>+92 300 1234567</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>support@marketlink.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Market Link. All rights reserved.</div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

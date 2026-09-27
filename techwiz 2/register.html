@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Market Link</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-image: url(https://thumbs.dreamstime.com/b/wheat-farm-background-wallpaper-abstract-vintage-sunset-65850813.jpg);
+background-position: center;
+background-repeat:no-repeat ;
+background-size: cover;">
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-links">
+      <span><i class="fa-solid fa-envelope"></i> support@marketlink.com</span>
+      <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+    </div>
+    <div class="top-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Become a Seller</a>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="products.html">Categories</a>
+      <a href="index.html#farmers">Farmers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="nav-search nav-search-form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search products...">
+      </form>
+      <a href="products.html" class="icon-btn" title="Wishlist" style="position:relative"><i class="fa-solid fa-heart"></i><span class="badge wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart" style="position:relative"><i class="fa-solid fa-cart-shopping"></i><span class="badge cart-count">0</span></a>
+      <a href="login.html" class="icon-btn" title="Login"><i class="fa-solid fa-user"></i></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="products.html">Categories</a>
+    <a href="index.html#farmers">Farmers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<div class="auth-wrap" style="max-width:520px">
+  <h1>Create Your Account</h1>
+  <p>Join Market Link as a customer or farmer/seller</p>
+  <form id="registerForm" novalidate>
+    <div class="acc-type-row">
+      <div class="acc-type-card selected" data-type="customer">
+        <div class="icon"><i class="fa-solid fa-bag-shopping"></i></div><strong>Customer</strong><p style="font-size:0.8rem;color:var(--text-light)">Buy fresh produce</p>
+      </div>
+      <div class="acc-type-card" data-type="farmer">
+        <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div><strong>Farmer / Seller</strong><p style="font-size:0.8rem;color:var(--text-light)">Sell your produce</p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Full Name</label><input type="text" name="fullName" required><span class="form-error">Please enter your name.</span></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required><span class="form-error">Please enter a valid phone number.</span></div>
+    </div>
+    <div class="form-group"><label>Email Address</label><input type="email" name="email" required><span class="form-error">Please enter a valid email address.</span></div>
+    <div class="form-row">
+      <div class="form-group"><label>Password</label><input type="password" name="password" id="regPassword" required data-minlength="6"><span class="form-error">Minimum 6 characters required.</span></div>
+      <div class="form-group"><label>Confirm Password</label><input type="password" name="confirmPassword" required data-match="password"><span class="form-error">Passwords do not match.</span></div>
+    </div>
+    <div class="checkbox-row mt-20" style="margin-bottom:20px">
+      <input type="checkbox" required> <span>I agree to the <a href="#" style="color:var(--primary)">Terms & Conditions</a></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+  </form>
+  <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Market Link logo" class="logo-img"></div>
+        <p>Connecting Farmers to Markets. Fresh agriculture products delivered directly from farm to your doorstep.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=Vegetables">Vegetables</a></li>
+          <li><a href="products.html?category=Fruits">Fruits</a></li>
+          <li><a href="products.html?category=Seeds">Seeds</a></li>
+          <li><a href="products.html?category=Farming%20Tools">Farming Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> <span>123 Agri Plaza, Karachi, Pakistan</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>+92 300 1234567</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>support@marketlink.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Market Link. All rights reserved.</div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>
